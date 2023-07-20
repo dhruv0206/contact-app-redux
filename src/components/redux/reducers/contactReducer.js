@@ -1,11 +1,5 @@
 const initialState = [
   {
-    id: 0,
-    name: "Jainam Vora",
-    number: 1234567890,
-    email: "abc@gmail.com",
-  },
-  {
     id: 1,
     name: "Test ",
     number: 9876543210,
