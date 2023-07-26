@@ -34,9 +34,10 @@ const AddContact = () => {
     if (checkNumber) {
       return toast.error("This Number already exsists");
     }
+    console.log("comm", contacts.length);
 
     const data = {
-      id: contacts[contacts.length - 1].id + 1,
+      id: contacts.length === 0 ? 1 : contacts[contacts.length - 1].id + 1,
       name,
       email,
       number,

@@ -1,11 +1,4 @@
-const initialState = [
-  {
-    id: 1,
-    name: "Test ",
-    number: 9876543210,
-    email: "test@test.com",
-  },
-];
+const initialState = [];
 
 const contactReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -18,13 +11,12 @@ const contactReducer = (state = initialState, action) => {
       );
       state = updateState;
       return state;
-    case "UPDATE_CONTACT":
-      const filteredContacts = state.filter(
-        (contact) => contact.id !== action.payload && contact
+    case "DELETE_CONTACT":
+      const updatedState = state.filter(
+        (contact) => contact.id !== action.payload
       );
-      state = filteredContacts;
+      state = updatedState;
       return state;
-
     default:
       return state;
   }
