@@ -54,7 +54,7 @@ const EditContact = () => {
     };
 
     dispatch({ type: "UPDATE_CONTACT", payload: data });
-    toast.success("Student updated Successfully!");
+    toast.success("Contact updated Successfully!");
     history.push("/");
   };
 
@@ -62,7 +62,7 @@ const EditContact = () => {
     <div className="container">
       {currentContact ? (
         <>
-          <h1 className="display-3 my-5 text-center">Edit Student {id}</h1>
+          <h1 className="display-3 my-5 text-center">Edit Contact {id}</h1>
           <div className="row">
             <div className="col-md-6 shadow mx-auto p-5">
               <form onSubmit={handleSubmit}>
@@ -91,7 +91,7 @@ const EditContact = () => {
                   <div className="d-flex">
                     <input
                       type="submit"
-                      value="Update Student"
+                      value="Update Contact"
                       className="btn btn-dark w-100 p-3"
                       style={{ borderRadius: "10px" }}
                     />
@@ -109,7 +109,7 @@ const EditContact = () => {
         </>
       ) : (
         <h1 className="display-3 my-5 text-center">
-          Student Contact with id {id} does not exsists
+          Contact with id {id} does not exsists
         </h1>
       )}
     </div>

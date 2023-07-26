@@ -44,14 +44,14 @@ const AddContact = () => {
     };
 
     dispatch({ type: "ADD_CONTACT", payload: data });
-    toast.success("Student added Successfully!");
+    toast.success("Contact added Successfully!");
     history.push("/");
   };
 
   return (
     <div className="container">
       <div className="row">
-        <h1 className="display-3 my-5 text-center">Add Student</h1>
+        <h1 className="display-3 my-5 text-center">Add Contact</h1>
         <div className="col-md-6 shadow mx-auto p-5">
           <form onSubmit={handleSubmit}>
             <div className="form-group">
@@ -78,7 +78,7 @@ const AddContact = () => {
               />
               <input
                 type="submit"
-                value="Add Student"
+                value="Add Contact"
                 className="btn-block btn-dark w-100 p-3"
                 style={{ borderRadius: "10px" }}
               />
